@@ -1,5 +1,6 @@
 package com.study.springFramework.application;
 
+import com.study.springFramework.application.repository.memory.MemoryMemberRepository;
 import com.study.springFramework.library.repository.MemberRepository;
 import com.study.springFramework.application.domain.Grade;
 import com.study.springFramework.application.domain.Member;
@@ -11,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("회원 저장소 IO 에 대한 단위 테스트")
 public class MemberRepositoryTest {
-    private MemberRepository memberRepository;
+    private MemberRepository memberRepository = new MemoryMemberRepository();
     private Member member;
 
     @BeforeEach
