@@ -11,15 +11,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DisplayName("memory 저장소 단위테스트")
 class MemoryStoreTest {
     private MemoryStore memoryStore = MemoryStore.create();
-    private Member member;
+    private Member member = new Member(1L, "홍길동", Grade.BASIC);;
 
     @BeforeEach
     void init() {
-        member = new Member(1L, "홍길동", Grade.BASIC);
+        memoryStore.clear();
     }
 
     @Test
-    @DisplayName("회원을 Memory에 저장한다.")
+    @DisplayName("회원을 Memory 에 저장한다.")
     void save() {
         // when
         memoryStore.save(member);
@@ -31,6 +31,9 @@ class MemoryStoreTest {
     @Test
     @DisplayName("id를 통해 회원을 Memory로 부터 조회한다.")
     void get() {
+        // given
+        memoryStore.save(member);
+
         // when/then
         assertThat(memoryStore.get(1L)).isEqualTo(member);
     }
