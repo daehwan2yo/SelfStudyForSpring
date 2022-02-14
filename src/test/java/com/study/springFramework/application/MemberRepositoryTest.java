@@ -1,7 +1,8 @@
 package com.study.springFramework.application;
 
-import com.study.springFramework.domain.Grade;
-import com.study.springFramework.domain.Member;
+import com.study.springFramework.library.repository.MemberRepository;
+import com.study.springFramework.application.domain.Grade;
+import com.study.springFramework.application.domain.Member;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -28,7 +29,10 @@ public class MemberRepositoryTest {
     @Test
     @DisplayName("회원을 Id 로 조회한다.")
     void findById() {
+        // given
+        memberRepository.save(member);
+
         // when/then
-        assertThat(memberRepository.findById(1L).orElseThrow(IllegalArgumentException::new));
+        assertThat(memberRepository.findById(1L).orElseThrow(IllegalArgumentException::new)).isEqualTo(member);
     }
 }

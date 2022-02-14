@@ -1,6 +1,6 @@
-package com.study.springFramework.application;
+package com.study.springFramework.library.repository;
 
-import com.study.springFramework.domain.Member;
+import com.study.springFramework.application.domain.Member;
 
 import java.util.Optional;
 

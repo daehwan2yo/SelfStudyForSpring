@@ -1,4 +1,4 @@
-package com.study.springFramework.domain;
+package com.study.springFramework.application.domain;
 
 public class Member {
     private Long id;

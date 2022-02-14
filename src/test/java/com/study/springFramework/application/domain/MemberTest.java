@@ -1,4 +1,4 @@
-package com.study.springFramework.domain;
+package com.study.springFramework.application.domain;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -8,6 +8,19 @@
 > 인프런 - 스프링 핵심 원리 기본편, 김영한 선생님  
 > nextstep - ATDD
 
+## 디렉토리 구조
+
+[springFramework]  
+|- [library] : interface 들을 모아둔 디렉토리   
+|&nbsp;&nbsp;&nbsp;&nbsp;|- [repository] : 저장소와 관련된 interface  
+|&nbsp;&nbsp;&nbsp;&nbsp;|- [service] : 비즈니스 로직과 관련된 interface  
+|&nbsp;&nbsp;&nbsp;&nbsp;|- [ui] : controller 와 관련된 interface  
+|- [application] : 구현체 (도메인, 비즈니스 로직) 들을 모아둔 디렉토리  
+|&nbsp;&nbsp;&nbsp;&nbsp;|- [domain] : 도메인 로직 구현체  
+|&nbsp;&nbsp;&nbsp;&nbsp;|- [service] : 비즈니스 로직 구현체  
+|&nbsp;&nbsp;&nbsp;&nbsp;|- [repository] : 저장소 로직 구현체  
+|&nbsp;&nbsp;&nbsp;&nbsp;|- [ui] : controller 구현체  
+
 ## 🚀 요구사항
 
 ### 회원
