@@ -12,7 +12,7 @@ public class MemberTest {
     @DisplayName("회원을 생성한다.")
     void Member_생성() {
         // when
-        Member member = new Member(1L, "홍길동", Grade.BASIC);
+        Member member = Member.of(1L, "홍길동", Grade.BASIC);
 
         // then
         assertThat(member.getName()).isEqualTo("홍길동");

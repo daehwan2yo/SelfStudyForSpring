@@ -5,10 +5,14 @@ public class Member {
     private String name;
     private Grade grade;
 
-    public Member(Long id, String name, Grade grade) {
+    private Member(Long id, String name, Grade grade) {
         this.id = id;
         this.name = name;
         this.grade = grade;
+    }
+
+    public static Member of(Long id, String name, Grade grade) {
+        return new Member(id, name, grade);
     }
 
     public String getName() {

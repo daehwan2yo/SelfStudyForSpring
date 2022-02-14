@@ -1,13 +1,13 @@
 package com.study.springFramework.application;
 
+import com.study.springFramework.application.domain.Member;
 import com.study.springFramework.application.repository.memory.MemoryMemberRepository;
 import com.study.springFramework.library.repository.MemberRepository;
-import com.study.springFramework.application.domain.Grade;
-import com.study.springFramework.application.domain.Member;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static com.study.springFramework.factory.EntityFactory.createFakeMember;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("회원 저장소 IO 에 대한 단위 테스트")
@@ -17,7 +17,7 @@ public class MemberRepositoryTest {
 
     @BeforeEach
     void init() {
-        member = new Member(1L, "홍길동", Grade.BASIC);
+        member = createFakeMember();
     }
 
     @Test

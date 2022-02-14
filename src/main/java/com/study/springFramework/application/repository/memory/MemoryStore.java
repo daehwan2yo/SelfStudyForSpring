@@ -2,11 +2,11 @@ package com.study.springFramework.application.repository.memory;
 
 import com.study.springFramework.application.domain.Member;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class MemoryStore {
-    private static final Map<Long, Member> store = new HashMap<>();
+    private static final Map<Long, Member> store = new ConcurrentHashMap<>();
     private static long PK = 1;
 
     public static MemoryStore create() {
