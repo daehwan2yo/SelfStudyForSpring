@@ -10,14 +10,19 @@ import org.junit.jupiter.api.Test;
 public class MemberAcceptanceTest extends AcceptanceTest {
 
     /**
-     * Scenario    : 회원 가입을 요청하면, 회원이 생성된다.
-     * When        : 회원 가입을 요청하면,
-     * Then        : 회원이 생성된다.
+     * Scenario     : 회원 가입을 요청하면, 회원이 생성된다.
+     * Given        : 생성할 회원의 정보가 준비되고
+     * When         : 회원 가입을 요청하면,
+     * Then         : 회원이 생성된다.
      */
     @Test
     @DisplayName("회원 가입을 요청하면 BASIC 등급의 회원이 생성된다.")
     void 회원가입() {
+        // given
 
+        // when
+
+        // then
     }
 
     /**
