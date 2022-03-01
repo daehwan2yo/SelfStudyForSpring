@@ -30,7 +30,7 @@
 
 **Feature : 회원 관리 기능**  
 - [ ] **사용자가 회원가입을 할 수 있다.**  
-![스크린샷 2022-02-10 오전 12 40 49](https://user-images.githubusercontent.com/26921986/153235539-42dd8685-233f-45a0-8a42-c6f38140862b.png)
+<img width="640" alt="스크린샷 2022-03-02 오전 1 01 29" src="https://user-images.githubusercontent.com/26921986/156203593-67302d54-b94d-4c4a-860f-879b0ed713fe.png">
 
 - [ ] **사용자의 회원 정보를 조회할 수 있다.**  
 ![스크린샷 2022-02-10 오전 12 41 11](https://user-images.githubusercontent.com/26921986/153235645-fa5fb29f-72e7-47c3-bf1b-465bbd1230b0.png)
