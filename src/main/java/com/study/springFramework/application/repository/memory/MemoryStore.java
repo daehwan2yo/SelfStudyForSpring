@@ -25,7 +25,7 @@ public class MemoryStore {
         return store.size();
     }
 
-    public void clear() {
+    public static void clear() {
         store.clear();
         PK = 1;
     }
