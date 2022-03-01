@@ -9,12 +9,12 @@ public class MemberServiceImpl implements MemberService {
     private final MemberRepository memberRepository = new MemoryMemberRepository();
 
     @Override
-    public Long join(Member member) {
-        return memberRepository.save(member);
+    public Long join(Long memberId) {
+        return null;
     }
 
     @Override
     public Member find(Long memberId) {
-        return memberRepository.findById(memberId).orElseThrow(IllegalArgumentException::new);
+        return null;
     }
 }
