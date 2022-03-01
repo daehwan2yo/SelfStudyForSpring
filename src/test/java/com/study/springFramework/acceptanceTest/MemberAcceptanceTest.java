@@ -1,13 +1,22 @@
 package com.study.springFramework.acceptanceTest;
 
+import com.study.springFramework.application.ui.dto.MemberRequest;
+import io.restassured.response.ExtractableResponse;
+import io.restassured.response.Response;
+import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import static com.study.springFramework.acceptanceTest.Steps.MemberSteps.*;
+import static com.study.springFramework.factory.RequestFactory.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Feature      : 회원 정보를 관리한다.
  */
 @DisplayName("회원 관리 기능 인수테스트")
 public class MemberAcceptanceTest extends AcceptanceTest {
+    private static final String MEMBER_NAME = "FakeMember";
 
     /**
      * Scenario     : 회원 가입을 요청하면, 회원이 생성된다.
@@ -19,10 +28,14 @@ public class MemberAcceptanceTest extends AcceptanceTest {
     @DisplayName("회원 가입을 요청하면 BASIC 등급의 회원이 생성된다.")
     void 회원가입() {
         // given
+        MemberRequest 회원_가입_요청_body = 회원_가입_body_생성(MEMBER_NAME);
 
         // when
+        ExtractableResponse<Response> 가입_응답 = 가입_요청(회원_가입_요청_body);
 
         // then
+        assertThat(가입_응답.statusCode()).isEqualTo(HttpStatus.SC_CREATED);
+        assertThat(가입_응답.header("Location")).isEqualTo("/members/" + 1L);
     }
 
     /**
