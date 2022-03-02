@@ -10,7 +10,7 @@ import com.study.springFramework.application.io.dto.MemberRequest;
 import com.study.springFramework.library.service.DiscountPolicy;
 
 public class DiscountPolicyTest {
-	private DiscountPolicy discountPolicy;
+	private DiscountPolicy discountPolicy = new PercentageDiscountPolicy();
 	
 	@Test
 	void BASIC_할인() {
