@@ -18,7 +18,7 @@ public class DiscountPolicyTest {
 		Member basicMember = Member.from(MemberRequest.from("FakeMember", Grade.BASIC));
 		
 		// when/then
-		assertThat(discountPolicy.discount(basicMember, 1000)).isEqualTo(900);
+		assertThat(discountPolicy.discount(basicMember, 1000)).isEqualTo(100);
 	}
 	
 	@Test

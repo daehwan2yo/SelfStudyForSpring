@@ -9,6 +9,6 @@ public class PercentageDiscountPolicy implements DiscountPolicy {
 		if (member.isVip()) {
 			return (int)(price * 0.5);
 		}
-		return (int)(price * 0.9);
+		return (int)(price * 0.1);
 	}
 }
