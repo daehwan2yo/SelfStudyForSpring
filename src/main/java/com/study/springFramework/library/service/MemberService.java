@@ -1,9 +1,10 @@
 package com.study.springFramework.library.service;
 
-import com.study.springFramework.application.domain.Member;
+import com.study.springFramework.application.io.dto.MemberRequest;
+import com.study.springFramework.application.io.dto.MemberResponse;
 
 public interface MemberService {
-    Long join(Long memberId);
-
-    Member find(Long memberId);
+	Long join(MemberRequest memberRequest);
+	
+	MemberResponse find(Long memberId);
 }
