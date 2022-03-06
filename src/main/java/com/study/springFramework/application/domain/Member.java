@@ -30,4 +30,6 @@ public class Member {
     public boolean isVip() {
         return grade == Grade.VIP;
     }
+    
+    
 }
